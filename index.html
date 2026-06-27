@@ -23,12 +23,29 @@
     <input type="number" id="rupees" min="0" placeholder="Ex: 1.5RS or 18% ">
     </div>
     <div>
+      <label for="est_date">Select Date : </label>
+      <select name="est_date" id="est_date">Actual
+         <option value="Estimate">Estimate Date</option>
+        <option value="Actual">Actual Date</option>
+      </select>
+      </div>
+      <div id="est" style="display: none;">
+        <label for="t">Years</label>
+        <input type="number" id="t">
+        <label for="u">Months</label>
+        <input type="number" id="u">
+        <label for="v">Days</label>
+        <input type="number" id="v">
+      </div>
+      <div id="actual" style="display: none;">
+      <div>
       <label for="given_date">Given Date :</label>
       <input type="date" name="given_date" id="given_date">
     </div>
     <div>
       <label for="to_date">To Date :</label>
       <input type="date" name="to_date" id="to_date">
+    </div>
     </div>
     <div>
       <button id="submit" onclick="Submit()">Submit</button>

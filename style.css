@@ -79,6 +79,16 @@ select{
     font-size:16px;
 }
 
+.act input{
+      width:180px;
+    height:38px;
+    border-radius:10px;
+    border:2px solid white;
+    padding:5px;
+    outline:none;
+    font-size:16px;
+}
+
 input{
     background:rgb(247,236,215);
 }
@@ -135,6 +145,19 @@ input{
     font-weight:bold;
     animation:colour 5s infinite;
 }
+#est input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80px;
+}
+.est{
+    display: none;
+}
+.actual{
+    display: none;
+}
+
 
 @keyframes colour{
     0%{
@@ -193,3 +216,4 @@ input{
         font-size:18px;
     }
 }
+
