@@ -72,13 +72,13 @@ function Submit(){
         x.innerHTML=`Given Amount = <span style="color:yellow">${amt}RS</span>`
         y.innerHTML=`Given Date = <span style="color:yellow">${d1.toDateString()}</span>`
         z.innerHTML=`To Date = <span style="color:yellow">${d2.toDateString()}</span>`
-        d.innerHTML=`Total Number Of Days = <span style="color:yellow">${years} Years and ${months} Months and ${days} Days</span>`
+        d.innerHTML=`Duration = <span style="color:yellow">${years} Years and ${months} Months and ${days} Days</span>`
         a.innerHTML=`Interest Amount = <span style="color:yellow">${inte}Rs</span>`
         b.innerHTML=`Total Amount = <span style="color:yellow">${Number(amt+inte)}Rs</span>`
         res.style.display="flex";
         m.style.display="none";
     }
-    else{
+    else if(select.value==='Estimate'){
         x.innerHTML=`Given Amount = <span style="color:yellow">${amt}RS</span>`
         y.innerHTML=`Years = <span style="color:yellow">${t} Years</span>`
         z.innerHTML=`Months = <span style="color:yellow">${u} Months</span>`
