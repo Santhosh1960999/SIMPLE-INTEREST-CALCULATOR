@@ -23,7 +23,7 @@ function Submit(){
     let z=document.getElementById("z");
     let amt=document.getElementById("amount").value;
     let r=document.getElementById("Interest").value;
-    
+    let mode=document.getElementById("est_date").value;
     let t=document.getElementById("t").value;
     let u=document.getElementById("u").value;
     let v=document.getElementById("v").value;
@@ -48,10 +48,11 @@ function Submit(){
     t=Number(t);
     u=Number(u);
     v=Number(v);
-    if(select.value==='Actual'){
+    if(mode==='Actual'){
      tdays = years * 360 + months * 30 + days;
+     console.log(tdays)
     }
-    else if(select.value==='Estimate'){
+    else if(mode==='Estimate'){
         tdays=t*360+u*30+v;
     }
    
@@ -68,7 +69,7 @@ function Submit(){
     }
     amt=Number(amt);
     inte=Number(inte);
-    if(select.value==='Actual'){
+    if(mode==='Actual'){
         x.innerHTML=`Given Amount = <span style="color:yellow">${amt}RS</span>`
         y.innerHTML=`Given Date = <span style="color:yellow">${d1.toDateString()}</span>`
         z.innerHTML=`To Date = <span style="color:yellow">${d2.toDateString()}</span>`
@@ -78,7 +79,7 @@ function Submit(){
         res.style.display="flex";
         m.style.display="none";
     }
-    else if(select.value==='Estimate'){
+    else if(mode==='Estimate'){
         x.innerHTML=`Given Amount = <span style="color:yellow">${amt}RS</span>`
         y.innerHTML=`Years = <span style="color:yellow">${t} Years</span>`
         z.innerHTML=`Months = <span style="color:yellow">${u} Months</span>`
