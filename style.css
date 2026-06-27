@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-image:url("bimg.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color:yellow;
+    font-size:45px;
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:30px;
+    animation:heading 3s infinite;
+}
+
+@keyframes heading{
+    0%,100%{
+        color:yellow;
+        transform:translateY(0);
+    }
+    25%{
+        color:lime;
+    }
+    50%{
+        transform:translateY(-15px);
+        color:cyan;
+    }
+    75%{
+        color:orange;
+    }
+}
+
+#main{
+    width:90%;
+    max-width:550px;
+    min-height:420px;
+    margin:20px auto;
+    border:3px solid rgb(77,195,246);
+    border-radius:25px;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(5px);
+    box-shadow:0 0 20px cyan;
+}
+
+#main div{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+label{
+    color:aqua;
+    font-size:20px;
+    font-weight:bold;
+}
+
+input,
+select{
+    width:180px;
+    height:38px;
+    border-radius:10px;
+    border:2px solid white;
+    padding:5px;
+    outline:none;
+    font-size:16px;
+}
+
+input{
+    background:rgb(247,236,215);
+}
+
+#Interest{
+    cursor:pointer;
+}
+
+#submit,
+#close{
+    width:130px;
+    height:40px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin:auto;
+}
+
+#submit{
+    background:dodgerblue;
+}
+
+#submit:hover{
+    background:white;
+    color:black;
+}
+
+#close{
+    background:red;
+}
+
+#close:hover{
+    background:white;
+    color:red;
+}
+
+#result{
+    width:90%;
+    max-width:550px;
+    margin:25px auto;
+    padding:20px;
+    display:none;
+    flex-direction:column;
+    gap:12px;
+    border:3px solid yellow;
+    border-radius:20px;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(5px);
+    box-shadow:0 0 20px yellow;
+    color:aqua;
+    font-size:22px;
+    font-weight:bold;
+    animation:colour 5s infinite;
+}
+
+@keyframes colour{
+    0%{
+        color:aqua;
+    }
+    20%{
+        color:lime;
+    }
+    40%{
+        color:orange;
+    }
+    60%{
+        color:hotpink;
+    }
+    80%{
+        color:yellow;
+    }
+    100%{
+        color:cyan;
+    }
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:28px;
+        padding:10px;
+    }
+
+    #main{
+        width:95%;
+        padding:20px;
+    }
+
+    #main div{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    label{
+        font-size:18px;
+    }
+
+    input,
+    select{
+        width:100%;
+    }
+
+    #submit,
+    #close{
+        width:100%;
+    }
+
+    #result{
+        width:95%;
+        font-size:18px;
+    }
+}

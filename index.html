@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SIMPLE INTEREST CALCULATOR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to Simple Interest calculator 💰💸</h1>
+  <div id="main">
+
+    <div>
+    <label for="amount">Enter Amount :</label>
+    <input type="number" id="amount" min="0">
+    </div>
+    <div>
+    <label for="rupees">Enter Rate  % or in RS :</label>
+    <select name="Interest" id="Interest">
+      <option value="RS">RS</option>
+      <OPtion value="%">%</OPtion>
+    </select>
+    <input type="number" id="rupees" min="0" placeholder="Ex: 1.5RS or 18% ">
+    </div>
+    <div>
+      <label for="given_date">Given Date :</label>
+      <input type="date" name="given_date" id="given_date">
+    </div>
+    <div>
+      <label for="to_date">To Date :</label>
+      <input type="date" name="to_date" id="to_date">
+    </div>
+    <div>
+      <button id="submit" onclick="Submit()">Submit</button>
+    </div>
+  </div>
+
+  <div id="result">
+      <p id="x">Given Amount : </p>
+      <p id="c">Interest : </p>
+      <p id="y">Given Date : </p>
+      <p id="z">To Date : </p>
+      <p id="d">Total Days : </p>
+      <p id="a">Interest : </p>
+      <p id="b">Total Amount : </p>
+      <button id="close" onclick="Close()">Close</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
