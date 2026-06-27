@@ -68,7 +68,7 @@ function Submit(){
     }
     amt=Number(amt);
     inte=Number(inte);
-    if(select==='Actual'){
+    if(select.value==='Actual'){
         x.innerHTML=`Given Amount = <span style="color:yellow">${amt}RS</span>`
         y.innerHTML=`Given Date = <span style="color:yellow">${d1.toDateString()}</span>`
         z.innerHTML=`To Date = <span style="color:yellow">${d2.toDateString()}</span>`
